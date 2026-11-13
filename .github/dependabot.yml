@@ -1,6 +1,11 @@
+# 自动依赖版本更新通过各仓库的显式开关加入名单。
+# 将所有 open-pull-requests-limit 设为正数可启用，每月检查一次。
+# 设为 0 表示移出自动版本更新名单。
+
 version: 2
 updates:
   - package-ecosystem: "npm"
+    open-pull-requests-limit: 0
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
